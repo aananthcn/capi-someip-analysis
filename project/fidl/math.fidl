@@ -1,0 +1,19 @@
+package ipc_math
+
+interface add_api
+{
+  version { major 1 minor 0 }
+  method add
+  {
+    in
+    {
+      Double num1
+      Double num2
+      Double call_no
+    }
+    out
+    {
+      Double result
+    }
+  }
+}

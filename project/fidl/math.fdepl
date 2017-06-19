@@ -1,0 +1,23 @@
+import "platform:/plugin/org.genivi.commonapi.someip/deployment/CommonAPI-SOMEIP_deployment_spec.fdepl"
+import "math.fidl"
+
+define org.genivi.commonapi.someip.deployment for interface ipc_math.add_api
+{
+  SomeIpServiceID = 4660
+
+  method add
+  {
+     SomeIpMethodID = 33000
+  }
+
+}
+
+define org.genivi.commonapi.someip.deployment for provider MyService
+{
+  instance ipc_math.add_api
+  {
+      InstanceId = "test"
+      SomeIpInstanceID = 22136
+  }
+
+}
