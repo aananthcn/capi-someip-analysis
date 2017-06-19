@@ -1,13 +1,13 @@
 # capi-someip-analysis
 
-This work takes a simple use case, that is, a remote service named "sum" exports "add" as its interface and this interface by a remote client "avg". 
+This work takes a simple use case, that is, a remote service named "sum" exports "add" as its interface and this interface called by a remote client "avg". 
 
     .-----.                     .-----.
     | avg |--------add()------->| sum |
     '-----'                     '-----'
            \                   /
              \               /
-               \
+               \           /
               .--------------.
               |    SOME/IP   |
               '--------------'
