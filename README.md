@@ -1,6 +1,6 @@
 # capi-someip-analysis
 
-This work takes a simple use case, that is, a remote service named "sum" exports "add" as its interface and this interface called by a remote client "avg". 
+This work takes a simple use case, that is, a remote service named "sum" exports "add" as its interface and this interface is called by a remote client "avg" as shown in the picture below.
 
     .-----.                     .-----.
     | avg |--------add()------->| sum |
@@ -12,7 +12,7 @@ This work takes a simple use case, that is, a remote service named "sum" exports
               |    SOME/IP   |
               '--------------'
               
-This information is configured in math.fidl file. And SOME/IP configurations are available in math.fdepl and vsomeip.json under ./project/fidl directory.
+The information about the inteface 'add' is configured in math.fidl file. And SOME/IP configurations for the same interface are available in math.fdepl and vsomeip.json under ./project/fidl directory.
 
 *Note: The source code for the above is pre-generated and copied under ./project/src-gen. If you make any changes to fidl or fdepl scripts please follow the steps in https://at.projects.genivi.org/wiki/pages/viewpage.action?pageId=5472316 to re-generate the source files.*
 
