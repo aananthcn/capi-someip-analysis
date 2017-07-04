@@ -50,14 +50,18 @@ Make sure you have cloned the repository
 
 ## Steps to Run
 1. cp ../fidl/vsomeip.json .
-2. From current terminal create a 'new' tab (press 'ctrl+shift+t')
+2. From current terminal create a 'new' tab (press 'ctrl+shift+t', if you are using Ubuntu)
 2. Go to first terminal tab and do the following  
+    ```
     export VSOMEIP_CONFIGURATION_FILE=vsomeip.json  
     export VSOMEIP_APPLICATION_NAME=service-sample  
     ./sum  
+     ```
 3. Go to next terminal tab and do the following  
+    ```
     export VSOMEIP_CONFIGURATION_FILE=vsomeip.json  
     export VSOMEIP_APPLICATION_NAME=client-sample  
     ./avg  
+    ```
     
 Now you will see sum calling avg and get the remote service executed.
