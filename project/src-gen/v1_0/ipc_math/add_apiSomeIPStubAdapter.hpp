@@ -84,12 +84,7 @@ public:
                                             const std::shared_ptr<CommonAPI::StubBase> &_stub)
         : CommonAPI::SomeIP::StubAdapter(_address, _connection),
           add_apiSomeIPStubAdapterInternal(_address, _connection, _stub) {
-             struct timeval tv;
-             struct tm  tm_;
-             gettimeofday(&tv,NULL);
-             tm_=*localtime(&tv.tv_sec);
-
-                std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+            print_time(__FILE__, __FUNCTION__, __LINE__);
     }
 };
 

@@ -22,6 +22,8 @@
 
 #include <iostream>
 
+#include "mytime.hpp"
+
 namespace CommonAPI {
 
 static const ConnectionId_t DEFAULT_CONNECTION_ID = "";
@@ -50,7 +52,7 @@ public:
     buildProxy(const std::string &_domain,
                const std::string &_instance,
                const ConnectionId_t &_connectionId = DEFAULT_CONNECTION_ID) {
-        std::cout << __FILE__ << "::" << __func__ << "() : " << __LINE__ << "\n";
+        print_time(__FILE__, __FUNCTION__, __LINE__);
         std::shared_ptr<Proxy> proxy
             = createProxy(_domain,
                           _ProxyClass<_AttributeExtensions...>::getInterface(),

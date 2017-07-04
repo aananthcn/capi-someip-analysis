@@ -41,7 +41,7 @@ int main()
             }
         }
         std::cout << "\n\nConnected...!!" << std::endl;
-        print_time();
+        print_time(__FILE__, __FUNCTION__, __LINE__);
        
 
         double sum=0;
@@ -59,9 +59,8 @@ int main()
 
                 std::cout << __FILE__ <<"::"<< __FUNCTION__<<" : "<< __LINE__ << " ==> " << arg << " + " << call_no << "\n";
                 // making remote function call
-                init_time();
                 myProxy->add(sum, arg, call_no, callStatus, local);
-                print_time();
+                print_time(__FILE__, __FUNCTION__, __LINE__);
 
                 if ( static_cast<int>(callStatus) ) {
                         std::cout<<"ERROR:INVOCATION OF METHOD ADD FAILED!\t" ;

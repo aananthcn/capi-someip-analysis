@@ -34,7 +34,7 @@ const ConnectionId_t &
 ProxyManager::getConnectionId() const {
     // Every connection is created as Connection
     // in Factory::createProxy and is only stored as ProxyConnection
-    std::cout << __FILE__ << "::" << __func__ << "() : " << __LINE__ << "\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     return std::static_pointer_cast<Connection>(proxy_.getConnection())->getConnectionId();
 }
 

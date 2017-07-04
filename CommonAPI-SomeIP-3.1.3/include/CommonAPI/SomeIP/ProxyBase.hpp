@@ -20,6 +20,8 @@
 #include <CommonAPI/SomeIP/ProxyConnection.hpp>
 #include <CommonAPI/SomeIP/Types.hpp>
 
+#include "mytime.hpp"
+
 namespace CommonAPI {
 namespace SomeIP {
 
@@ -65,7 +67,7 @@ class ProxyBase
 };
 
 const std::shared_ptr< ProxyConnection >& ProxyBase::getConnection() const {
-    std::cout << __FILE__ << "." << __func__ << "() :" << __LINE__ << "\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     return connection_;
 }
 

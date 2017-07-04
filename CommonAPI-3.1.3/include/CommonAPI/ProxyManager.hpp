@@ -53,7 +53,7 @@ public:
     template<template<typename ...> class _ProxyClass, typename ... _AttributeExtensions>
     std::shared_ptr<_ProxyClass<_AttributeExtensions...> >
     buildProxy(const std::string &_instance) {
-        std::cout << __FILE__ << "::" << __func__ << "() : " << __LINE__ << "\n";
+        print_time(__FILE__, __FUNCTION__, __LINE__);
         std::shared_ptr<Proxy> proxy = createProxy(getDomain(), getInterface(), _instance, getConnectionId());
         if (proxy) {
             return std::make_shared<_ProxyClass<_AttributeExtensions...>>(proxy);

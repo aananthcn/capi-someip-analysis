@@ -70,7 +70,7 @@ Proxy::getSomeIpAddress() const {
 }
 
 bool Proxy::isAvailable() const {
-    std::cout << __FILE__ << "::" << __func__ << "() : " << __LINE__ << "\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     std::cout << "availabilityStatus_ = " << (int) availabilityStatus_ << "\n";
     return (getConnection()->isConnected()
             && availabilityStatus_ == AvailabilityStatus::AVAILABLE);

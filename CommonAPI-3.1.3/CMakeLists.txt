@@ -99,6 +99,7 @@ ENDIF(DLT_FOUND)
 include_directories(
     include
     ${DLT_INCLUDE_DIRS}
+    ../project/src
 )
 
 link_directories(

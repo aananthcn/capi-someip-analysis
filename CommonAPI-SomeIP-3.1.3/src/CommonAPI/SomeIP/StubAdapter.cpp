@@ -8,6 +8,8 @@
 #include <CommonAPI/Utils.hpp>
 #include <CommonAPI/SomeIP/StubAdapter.hpp>
 
+#include "mytime.hpp"
+
 namespace CommonAPI {
 namespace SomeIP {
 
@@ -40,7 +42,7 @@ StubAdapter::isManagingInterface() {
 
 const std::shared_ptr<ProxyConnection> &
 StubAdapter::getConnection() const {
-    std::cout << __FILE__ << "." << __func__ << "() :" << __LINE__ << "\n";
+	print_time(__FILE__, __FUNCTION__, __LINE__);
     return connection_;
 }
 

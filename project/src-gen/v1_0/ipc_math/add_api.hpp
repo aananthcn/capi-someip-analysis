@@ -23,6 +23,8 @@
 #include <time.h>
 #include <sys/time.h>
 
+#include "mytime.hpp"
+
 #undef COMMONAPI_INTERNAL_COMPILATION
 
 namespace v1_0 {
@@ -31,13 +33,7 @@ namespace ipc_math {
 class add_api {
 public:
     virtual ~add_api() {
-
-      struct timeval tv;
-      struct tm  tm_;
-      gettimeofday(&tv,NULL);
-      tm_=*localtime(&tv.tv_sec);
-
-      std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
 
    }
 
@@ -46,25 +42,12 @@ public:
 };
 
 const char* add_api::getInterface() {
-
-   struct timeval tv;
-   struct tm  tm_;
-   gettimeofday(&tv,NULL);
-   tm_=*localtime(&tv.tv_sec);
-
-
-      std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     return ("ipc_math.add_api");
 }
 
 CommonAPI::Version add_api::getInterfaceVersion() {
-
-   struct timeval tv;
-   struct tm  tm_;
-   gettimeofday(&tv,NULL);
-   tm_=*localtime(&tv.tv_sec);
-
-      std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     return CommonAPI::Version(1, 0);
 }
 

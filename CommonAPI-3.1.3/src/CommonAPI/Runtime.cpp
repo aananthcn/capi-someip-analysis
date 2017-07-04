@@ -44,6 +44,7 @@ Runtime::setProperty(const std::string &_name, const std::string &_value) {
 }
 
 std::shared_ptr<Runtime> Runtime::get() {
+    print_time(__FILE__, __func__, __LINE__);
     theRuntime__->init();
     return theRuntime__;
 }
@@ -51,6 +52,8 @@ std::shared_ptr<Runtime> Runtime::get() {
 Runtime::Runtime()
     : defaultBinding_(COMMONAPI_DEFAULT_BINDING),
       defaultFolder_(COMMONAPI_DEFAULT_FOLDER) {
+        init_time();
+        print_time(__FILE__, __func__, __LINE__);
 }
 
 Runtime::~Runtime() {
@@ -127,6 +130,9 @@ void Runtime::init() {
         COMMONAPI_INFO("Using default configuration file \'", defaultConfig_, "\'");
 
         isInitialized = true;
+        print_time(__FILE__, __FUNCTION__, __LINE__);
+        std::cout << "default binding = " << defaultBinding_ << ", default folder = " << defaultFolder_
+            << "default config = " << defaultConfig_ << ", default factory = " << defaultFactory_ << endl;
     }
 }
 
@@ -208,7 +214,7 @@ Runtime::createProxy(
         const std::string &_domain, const std::string &_interface, const std::string &_instance,
         const ConnectionId_t &_connectionId) {
 
-    std::cout << __FILE__ << "::" << __func__ << "() : " << __LINE__ << "\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     // Check whether we already know how to create such proxies...
     std::shared_ptr<Proxy> proxy = createProxyHelper(_domain, _interface, _instance, _connectionId);
     if (!proxy) {
@@ -363,7 +369,7 @@ std::shared_ptr<Proxy>
 Runtime::createProxyHelper(const std::string &_domain, const std::string &_interface, const std::string &_instance,
                            const std::string &_connectionId) {
     std::lock_guard<std::mutex> itsLock(factoriesMutex_);
-    std::cout << __FILE__ << "::" << __func__ << "() : " << __LINE__ << "\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     for (auto factory : factories_) {
         std::shared_ptr<Proxy> proxy
             = factory.second->createProxy(_domain, _interface, _instance, _connectionId);

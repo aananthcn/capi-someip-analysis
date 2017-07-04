@@ -240,7 +240,7 @@ Factory::unregisterManagedService(const std::string &_address) {
 
 std::shared_ptr<Connection>
 Factory::getConnection(const ConnectionId_t &_connectionId) {
-    std::cout << __FILE__ << "." << __func__ << "() :" << __LINE__ << "\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     std::cout << "_connectionId = \"" << _connectionId << "\"\n";
     std::unique_lock<std::mutex> itsLock(connectionMutex_);
 
@@ -262,7 +262,7 @@ Factory::getConnection(const ConnectionId_t &_connectionId) {
 
 std::shared_ptr<Connection>
 Factory::getConnection(std::shared_ptr<MainLoopContext> _context) {
-    std::cout << __FILE__ << "." << __func__ << "() :" << __LINE__ << "\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     std::unique_lock<std::mutex> itsLock(connectionMutex_);
 
     if (!_context)

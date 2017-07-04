@@ -17,6 +17,8 @@
 #include <CommonAPI/SomeIP/Connection.hpp>
 #include <CommonAPI/SomeIP/Defines.hpp>
 
+#include "mytime.hpp"
+
 namespace CommonAPI {
 namespace SomeIP {
 
@@ -402,7 +404,7 @@ void Connection::removeEventHandler(
 
 bool
 Connection::isAvailable(const Address &_address) {
-    std::cout << __FILE__ << "::" << __func__ << "() : " << __LINE__ << "\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     return application_->is_available(_address.getService(), _address.getInstance());
 }
 
@@ -561,7 +563,7 @@ void Connection::processMsgQueueEntry(Watch::msgQueueEntry &_msgQueueEntry) {
 }
 
 const ConnectionId_t& Connection::getConnectionId() {
-    std::cout << __FILE__ << "::" << __func__ << "() : " << __LINE__ << "\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     return static_cast<const ConnectionId_t&>(application_->get_name());
 }
 

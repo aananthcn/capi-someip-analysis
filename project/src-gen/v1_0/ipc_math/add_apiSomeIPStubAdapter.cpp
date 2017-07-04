@@ -20,6 +20,8 @@
 #include <time.h>
 #include <sys/time.h>
 
+#include "mytime.hpp"
+
 #undef COMMONAPI_INTERNAL_COMPILATION
 
 namespace v1_0 {
@@ -29,48 +31,29 @@ std::shared_ptr<CommonAPI::SomeIP::StubAdapter> createadd_apiSomeIPStubAdapter(
                    const CommonAPI::SomeIP::Address &_address,
                    const std::shared_ptr<CommonAPI::SomeIP::ProxyConnection> &_connection,
                    const std::shared_ptr<CommonAPI::StubBase> &_stub) {
-                      struct timeval tv;
-                      struct tm  tm_;
-                      gettimeofday(&tv,NULL);
-                      tm_=*localtime(&tv.tv_sec);
 
-                        std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     return std::make_shared<add_apiSomeIPStubAdapter>(_address, _connection, _stub);
 }
 
 INITIALIZER(registeradd_apiSomeIPStubAdapter) {
-   struct timeval tv;
-   struct tm  tm_;
-   gettimeofday(&tv,NULL);
-   tm_=*localtime(&tv.tv_sec);
-
-      std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     CommonAPI::SomeIP::AddressTranslator::get()->insert(
-        "local:ipc_math.add_api:test",
-        0x1234, 0x5678);
+      "local:ipc_math.add_api:test",
+      0x1234, 0x5678);
     CommonAPI::SomeIP::Factory::get()->registerStubAdapterCreateMethod(
-        add_api::getInterface(),
-        &createadd_apiSomeIPStubAdapter);
+      add_api::getInterface(),
+      &createadd_apiSomeIPStubAdapter);
 }
 
 add_apiSomeIPStubAdapterInternal::~add_apiSomeIPStubAdapterInternal() {
-   struct timeval tv;
-   struct tm  tm_;
-   gettimeofday(&tv,NULL);
-   tm_=*localtime(&tv.tv_sec);
-
-      std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
     deactivateManagedInstances();
     add_apiSomeIPStubAdapterHelper::deinit();
+    print_time(__FILE__, __FUNCTION__, __LINE__);
 }
 
 void add_apiSomeIPStubAdapterInternal::deactivateManagedInstances() {
-   struct timeval tv;
-   struct tm  tm_;
-   gettimeofday(&tv,NULL);
-   tm_=*localtime(&tv.tv_sec);
-
-      std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+   print_time(__FILE__, __FUNCTION__, __LINE__);
 }
 
 CommonAPI::SomeIP::GetAttributeStubDispatcher<
@@ -96,47 +79,25 @@ CommonAPI::SomeIP::MethodWithReplyStubDispatcher<
 
 
 const add_apiSomeIPStubAdapterHelper::StubDispatcherTable& add_apiSomeIPStubAdapterInternal::getStubDispatcherTable() {
-   /*struct timeval tv;
-   struct tm  tm_;
-   gettimeofday(&tv,NULL);
-   tm_=*localtime(&tv.tv_sec);
-   tm_.tm_sec += ( tv.tv_usec * (10E-6) );
-
-      std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";*/
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     return stubDispatcherTable_;
 }
 
 const CommonAPI::SomeIP::StubAttributeTable& add_apiSomeIPStubAdapterInternal::getStubAttributeTable() {
-   struct timeval tv;
-   struct tm  tm_;
-   gettimeofday(&tv,NULL);
-   tm_=*localtime(&tv.tv_sec);
-
-      std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     return stubAttributeTable_;
 }
 
 
 add_apiSomeIPStubAdapterInternal::add_apiSomeIPStubAdapterInternal(
-        const CommonAPI::SomeIP::Address &_address,
-        const std::shared_ptr<CommonAPI::SomeIP::ProxyConnection> &_connection,
-        const std::shared_ptr<CommonAPI::StubBase> &_stub):
-        CommonAPI::SomeIP::StubAdapter(_address, _connection),
-        add_apiSomeIPStubAdapterHelper(
-            _address,
-            _connection,
-            std::dynamic_pointer_cast<add_apiStub>(_stub)),
-        stubDispatcherTable_({
-            { { 0x80e8 }, &ipc_math::add_apiSomeIPStubAdapterInternal::addStubDispatcher }
-        }),
-        stubAttributeTable_(
-        ) {
-           struct timeval tv;
-           struct tm  tm_;
-           gettimeofday(&tv,NULL);
-           tm_=*localtime(&tv.tv_sec);
-
-              std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+    const CommonAPI::SomeIP::Address &_address,
+    const std::shared_ptr<CommonAPI::SomeIP::ProxyConnection> &_connection,
+    const std::shared_ptr<CommonAPI::StubBase> &_stub):
+    CommonAPI::SomeIP::StubAdapter(_address, _connection),
+    add_apiSomeIPStubAdapterHelper(_address, _connection, std::dynamic_pointer_cast<add_apiStub>(_stub)),
+    stubDispatcherTable_({ { { 0x80e8 }, &ipc_math::add_apiSomeIPStubAdapterInternal::addStubDispatcher } } ),
+    stubAttributeTable_() {
+        print_time(__FILE__, __FUNCTION__, __LINE__);
 }
 
 } // namespace ipc_math

@@ -20,44 +20,24 @@ namespace ipc_math {
 add_apiStubDefault::add_apiStubDefault():
         remoteEventHandler_(this),
         interfaceVersion_(add_api::getInterfaceVersion()) {
-           struct timeval tv;
-          struct tm  tm_;
-          gettimeofday(&tv,NULL);
-          tm_=*localtime(&tv.tv_sec);
-
-             std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
 }
 
 const CommonAPI::Version& add_apiStubDefault::getInterfaceVersion(std::shared_ptr<CommonAPI::ClientId> _client) {
-   struct timeval tv;
-   struct tm  tm_;
-   gettimeofday(&tv,NULL);
-   tm_=*localtime(&tv.tv_sec);
-
-      std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     return interfaceVersion_;
 }
 
 add_apiStubRemoteEvent* add_apiStubDefault::initStubAdapter(const std::shared_ptr<add_apiStubAdapter> &_adapter) {
-   struct timeval tv;
-   struct tm  tm_;
-   gettimeofday(&tv,NULL);
-   tm_=*localtime(&tv.tv_sec);
-
-      std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     CommonAPI::Stub<add_apiStubAdapter, add_apiStubRemoteEvent>::stubAdapter_ = _adapter;
     return &remoteEventHandler_;
 }
 
 
 void add_apiStubDefault::add(const std::shared_ptr<CommonAPI::ClientId> _client, double _num1, double _num2, double _call_no, addReply_t _reply) {
-   struct timeval tv;
-   struct tm  tm_;
-   gettimeofday(&tv,NULL);
-   tm_=*localtime(&tv.tv_sec);
-
-      std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
     double result = 0.0;
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     _reply(result);
 }
 
@@ -67,12 +47,7 @@ void add_apiStubDefault::add(const std::shared_ptr<CommonAPI::ClientId> _client,
 add_apiStubDefault::RemoteEventHandler::RemoteEventHandler(add_apiStubDefault *_defaultStub)
     :
       defaultStub_(_defaultStub) {
-         struct timeval tv;
-         struct tm  tm_;
-         gettimeofday(&tv,NULL);
-         tm_=*localtime(&tv.tv_sec);
-
-            std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+    print_time(__FILE__, __FUNCTION__, __LINE__);
 }
 
 } // namespace ipc_math

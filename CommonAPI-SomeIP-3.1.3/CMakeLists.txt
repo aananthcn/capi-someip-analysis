@@ -109,6 +109,7 @@ include_directories (
     ${COMMONAPI_INCLUDE_DIRS}
     ${VSOMEIP_INCLUDE_DIRS}
     include
+    ../project/src
 )
 
 file (GLOB CommonAPI-SomeIP_SRC "src/CommonAPI/SomeIP/*.cpp")
