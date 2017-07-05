@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void init_time(void);
+void init_time(string file, string func, int line);
 void print_time(string file, string func, int line);
 
 #endif

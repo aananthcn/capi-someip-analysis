@@ -52,7 +52,7 @@ std::shared_ptr<Runtime> Runtime::get() {
 Runtime::Runtime()
     : defaultBinding_(COMMONAPI_DEFAULT_BINDING),
       defaultFolder_(COMMONAPI_DEFAULT_FOLDER) {
-        init_time();
+        init_time(__FILE__, __FUNCTION__, __LINE__);
         print_time(__FILE__, __func__, __LINE__);
 }
 
@@ -62,6 +62,8 @@ Runtime::~Runtime() {
 
 bool
 Runtime::registerFactory(const std::string &_binding, std::shared_ptr<Factory> _factory) {
+    print_time(__FILE__, __func__, __LINE__);
+    cout << "register factory : " << _binding << endl;
     COMMONAPI_DEBUG("Registering factory for binding=", _binding);
     bool isRegistered(false);
 #ifndef WIN32
@@ -131,7 +133,7 @@ void Runtime::init() {
 
         isInitialized = true;
         print_time(__FILE__, __FUNCTION__, __LINE__);
-        std::cout << "default binding = " << defaultBinding_ << ", default folder = " << defaultFolder_
+        std::cout << "<<< default binding = " << defaultBinding_ << ", default folder = " << defaultFolder_
             << "default config = " << defaultConfig_ << ", default factory = " << defaultFactory_ << endl;
     }
 }
@@ -155,6 +157,8 @@ Runtime::readConfiguration() {
             config = defaultConfig_;
         }
     }
+    print_time(__FILE__, __FUNCTION__, __LINE__);
+    cout << "<<< config file = " << config << endl;
 
     IniFileReader reader;
     if (!reader.load(config))
@@ -253,13 +257,18 @@ bool
 Runtime::registerStub(const std::string &_domain, const std::string &_interface, const std::string &_instance,
                         std::shared_ptr<StubBase> _stub, const ConnectionId_t &_connectionId) {
 
+    print_time(__FILE__, __func__, __LINE__);
     bool isRegistered = registerStubHelper(_domain, _interface, _instance, _stub, _connectionId);
     if (!isRegistered) {
         std::string library = getLibrary(_domain, _interface, _instance, false);
         std::lock_guard<std::mutex> itsGuard(loadMutex_);
+        cout << "<<< Loading library ==> " + library  + "\n";
         if (loadLibrary(library)) {
             isRegistered = registerStubHelper(_domain, _interface, _instance, _stub, _connectionId);
         }
+    }
+    else {
+        cout << "<<< stub helper registration succeeded!\n";
     }
     return isRegistered;
 }
@@ -405,8 +414,14 @@ bool
 Runtime::registerStubHelper(const std::string &_domain, const std::string &_interface, const std::string &_instance,
                                       std::shared_ptr<StubBase> _stub, const std::string &_connectionId) {
     bool isRegistered(false);
+
+
+    int i = 0;
+    print_time(__FILE__, __FUNCTION__, __LINE__);
+
     std::lock_guard<std::mutex> itsLock(factoriesMutex_);
     for (auto factory : factories_) {
+        cout << "<<< loop count = " << i++ << ", factory: " << factory.first << endl;
         isRegistered = factory.second->registerStub(_domain, _interface, _instance, _stub, _connectionId);
         if (isRegistered)
             return isRegistered;

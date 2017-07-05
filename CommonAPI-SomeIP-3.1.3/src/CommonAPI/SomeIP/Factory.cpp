@@ -16,6 +16,7 @@ namespace CommonAPI {
 namespace SomeIP {
 
 INITIALIZER(FactoryInit) {
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     Runtime::get()->registerFactory("someip", Factory::get());
 }
 

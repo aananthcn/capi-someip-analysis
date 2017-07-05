@@ -19,7 +19,7 @@ int main()
 {
         int i;
         // initialize time
-        init_time();
+        init_time(__FILE__, __FUNCTION__, __LINE__);
 
         // initialize input vector 
         std::vector<double> vin;

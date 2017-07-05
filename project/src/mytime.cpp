@@ -9,12 +9,13 @@ using namespace std;
 
 static double Time_us;
 
-void init_time(void)
+void init_time(string file, string func, int line)
 {
         struct timeval tv;
 
         gettimeofday(&tv, NULL);
         Time_us = tv.tv_sec * 1000000 + tv.tv_usec;
+        std::cout << "<<< " << file << "::" << func << "():" << line << " | TIMER RESET!!" << endl;
 }
 
 void print_time(string file, string func, int line)

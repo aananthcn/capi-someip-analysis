@@ -120,6 +120,7 @@ public:
                          const std::string &_instance,
                          std::shared_ptr<_Stub> _service,
                          const ConnectionId_t &_connectionId = DEFAULT_CONNECTION_ID) {
+        print_time(__FILE__, __func__, __LINE__);
         return registerStub(_domain, _Stub::StubInterface::getInterface(), _instance, _service, _connectionId);
     }
 
