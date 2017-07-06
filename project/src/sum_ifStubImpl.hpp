@@ -9,14 +9,14 @@
 #include <ctime>
 #include <stdlib.h>
 #include <stdio.h>
-#include <v1_0/ipc_math/add_apiStubDefault.hpp>
+#include <v1_0/math/sum/sum_ifStubDefault.hpp>
 
-class add_apiStubImpl: public v1_0::ipc_math::add_apiStubDefault
+class add_apiStubImpl: public v1_0::math::sum::sum_ifStubDefault
 {
 public:
 	add_apiStubImpl();
 	virtual ~add_apiStubImpl();
-	virtual void add(const std::shared_ptr<CommonAPI::ClientId> _client, double _num1, double _num2, double _call_no, addReply_t _reply);
+	virtual void add2(const std::shared_ptr<CommonAPI::ClientId> _client, double _num1, double _num2, add2Reply_t _reply);
 	static void my_signal_handeler(int sig);
 	int getCallCount();
 

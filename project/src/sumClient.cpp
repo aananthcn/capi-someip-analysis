@@ -5,12 +5,12 @@
 #include <ctime>
 #include <time.h>
 #include <sys/time.h>
-#include <v1_0/ipc_math/add_apiProxy.hpp>
+#include <v1_0/math/sum/sum_ifProxy.hpp>
 #include <cmath>
 
 #include "mytime.hpp"
 
-using namespace v1_0::ipc_math;
+using namespace v1_0::math::sum;
 
 
 
@@ -28,7 +28,7 @@ int main()
         }
 
         std::shared_ptr <CommonAPI::Runtime> runtime = CommonAPI::Runtime::get();
-        std::shared_ptr <add_apiProxy<>> myProxy = runtime->buildProxy <add_apiProxy> ("local", "test");
+        std::shared_ptr <sum_ifProxy<>> myProxy = runtime->buildProxy <sum_ifProxy> ("local", "test");
 
         i = 0;
         std::cout << "\n\nProxy is trying to connect to stub...\n";
@@ -59,7 +59,7 @@ int main()
 
                 std::cout << __FILE__ <<"::"<< __FUNCTION__<<" : "<< __LINE__ << " ==> " << arg << " + " << call_no << "\n";
                 // making remote function call
-                myProxy->add(sum, arg, call_no, callStatus, local);
+                myProxy->add2(sum, arg, callStatus, local);
                 print_time(__FILE__, __FUNCTION__, __LINE__);
 
                 if ( static_cast<int>(callStatus) ) {

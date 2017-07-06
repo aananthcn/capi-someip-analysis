@@ -16,20 +16,20 @@ link_directories(
      ../../vSomeIP-1.3.0/build
 )
 
-add_executable(avg
-    src/avg.cpp
+add_executable(sum-client
+    src/sumClient.cpp
     src/mytime.cpp
-    src-gen/v1_0/ipc_math/add_apiSomeIPProxy.cpp
-    src-gen/v1_0/ipc_math/add_apiSomeIPDeployment.cpp
+    src-gen/v1_0/math/sum/sum_ifSomeIPProxy.cpp
+    src-gen/v1_0/math/sum/sum_ifSomeIPDeployment.cpp
 )
-target_link_libraries(avg CommonAPI CommonAPI-SomeIP vsomeip)
+target_link_libraries(sum-client CommonAPI CommonAPI-SomeIP vsomeip)
 
 add_executable(sum
     src/sum.cpp
     src/mytime.cpp
-    src/add_apiStubImpl.cpp
-    src-gen/v1_0/ipc_math/add_apiSomeIPStubAdapter.cpp
-    src-gen/v1_0/ipc_math/add_apiStubDefault.cpp
-    src-gen/v1_0/ipc_math/add_apiSomeIPDeployment.cpp
+    src/sum_ifStubImpl.cpp
+    src-gen/v1_0/math/sum/sum_ifSomeIPStubAdapter.cpp
+    src-gen/v1_0/math/sum/sum_ifSomeIPDeployment.cpp
+    src-gen/v1_0/math/sum/sum_ifStubDefault.cpp
 )
 target_link_libraries(sum CommonAPI CommonAPI-SomeIP vsomeip) 

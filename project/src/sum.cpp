@@ -2,7 +2,7 @@
 #include <thread>
 #include <CommonAPI/CommonAPI.hpp>
 
-#include "add_apiStubImpl.hpp"
+#include "sum_ifStubImpl.hpp"
 #include "mytime.hpp"
 
 #include <ctime>

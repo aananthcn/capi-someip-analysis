@@ -1,18 +1,18 @@
 # capi-someip-analysis
 
-This work takes a simple use case, that is, a remote service named "sum" exports "add" as its interface and this interface is called by a remote client "avg" as shown in the picture below.
+This work takes a simple use case, that is, a remote service named "sum" exports "add" as its interface and this interface is called by a remote client "sum-client" as shown in the picture below.
 
-    .-----.                     .-----.
-    | avg |--------add()------->| sum |
-    '-----'                     '-----'
-           \                   /
-             \               /
-               \           /
-              .--------------.
-              |    SOME/IP   |
-              '--------------'
+    .------------.                      .-----.
+    | sum-client |--------add2()------->| sum |
+    '------------'                      '-----'
+           \                            /
+             \                        /
+               \                    /
+             .-----------------------.
+             |   Runtime (SOME/IP)   |
+             '-----------------------'
               
-The information about the inteface 'add' is configured in math.fidl file. And SOME/IP configurations for the same interface are available in math.fdepl and vsomeip.json under ./project/fidl directory.
+The information about the inteface 'add' is configured in sum.fidl file. And SOME/IP configurations for the same interface are available in sum.fdepl and vsomeip.json under ./project/fidl directory.
 
 *Note: The source code for the above is pre-generated and copied under ./project/src-gen. If you make any changes to fidl or fdepl scripts please follow the steps in https://at.projects.genivi.org/wiki/pages/viewpage.action?pageId=5472316 to re-generate the source files.*
 
@@ -61,7 +61,7 @@ Make sure you have cloned the repository
     ```
     export VSOMEIP_CONFIGURATION_FILE=vsomeip.json  
     export VSOMEIP_APPLICATION_NAME=client-sample  
-    ./avg  
+    ./sum-client  
     ```
     
-Now you will see sum calling avg and get the remote service executed.
+Now you will see sum calling sum-client and get the remote service executed.
