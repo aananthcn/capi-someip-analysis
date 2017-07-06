@@ -1,5 +1,5 @@
-#if !defined(add_apiStubImpl_H_)
-#define add_apiStubImpl_H_
+#if !defined(sum_ifStubImpl_H_)
+#define sum_ifStubImpl_H_
 
 #include <CommonAPI/CommonAPI.hpp>
 #include <signal.h>
@@ -11,11 +11,11 @@
 #include <stdio.h>
 #include <v1_0/math/sum/sum_ifStubDefault.hpp>
 
-class add_apiStubImpl: public v1_0::math::sum::sum_ifStubDefault
+class sum_ifStubImpl: public v1_0::math::sum::sum_ifStubDefault
 {
 public:
-	add_apiStubImpl();
-	virtual ~add_apiStubImpl();
+	sum_ifStubImpl();
+	virtual ~sum_ifStubImpl();
 	virtual void add2(const std::shared_ptr<CommonAPI::ClientId> _client, double _num1, double _num2, add2Reply_t _reply);
 	static void my_signal_handeler(int sig);
 	int getCallCount();
