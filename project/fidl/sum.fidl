@@ -1,19 +1,19 @@
-package ipc_math
+package math.sum
 
-interface add_api
-{
+interface sum_if {
+
   version { major 1 minor 0 }
-  method add
-  {
-    in
-    {
+
+  method add2 {
+
+    in {
       Double num1
       Double num2
-      Double call_no
     }
-    out
-    {
+
+    out {
       Double result
     }
+
   }
 }

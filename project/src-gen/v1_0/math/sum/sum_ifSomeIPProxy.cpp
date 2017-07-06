@@ -7,97 +7,62 @@
         * If a copy of the MPL was not distributed with this file, You can obtain one at
         * http://mozilla.org/MPL/2.0/.
         */
-        #include <v1_0/ipc_math/add_apiSomeIPProxy.hpp>
-
+        #include <v1_0/math/sum/sum_ifSomeIPProxy.hpp>
+        
         #if !defined (COMMONAPI_INTERNAL_COMPILATION)
         #define COMMONAPI_INTERNAL_COMPILATION
         #endif
 
         #include <CommonAPI/SomeIP/AddressTranslator.hpp>
-        #include <iostream>
-        #include <ctime>
-        #include <time.h>
-        #include <sys/time.h>
-
+        
         #undef COMMONAPI_INTERNAL_COMPILATION
 
         namespace v1_0 {
-        namespace ipc_math {
+        namespace math {
+        namespace sum {
 
-        std::shared_ptr<CommonAPI::SomeIP::Proxy> createadd_apiSomeIPProxy(
+        std::shared_ptr<CommonAPI::SomeIP::Proxy> createsum_ifSomeIPProxy(
                             const CommonAPI::SomeIP::Address &_address,
                             const std::shared_ptr<CommonAPI::SomeIP::ProxyConnection> &_connection) {
-                               struct timeval tv;
-                               struct tm  tm_;
-                               gettimeofday(&tv,NULL);
-                               tm_=*localtime(&tv.tv_sec);
-
-                              std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
-            return std::make_shared<add_apiSomeIPProxy>(_address, _connection);
+            return std::make_shared<sum_ifSomeIPProxy>(_address, _connection);
         }
 
-        INITIALIZER(registeradd_apiSomeIPProxy) {
-           struct timeval tv;
-           struct tm  tm_;
-           gettimeofday(&tv,NULL);
-           tm_=*localtime(&tv.tv_sec);
-
-            std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+        INITIALIZER(registersum_ifSomeIPProxy) {
             CommonAPI::SomeIP::AddressTranslator::get()->insert(
-                "local:ipc_math.add_api:test",
+                "local:math.sum.sum_if:test",
                 0x1234, 0x5678);
             CommonAPI::SomeIP::Factory::get()->registerProxyCreateMethod(
-                add_api::getInterface(),
-                &createadd_apiSomeIPProxy);
+                sum_if::getInterface(),
+                &createsum_ifSomeIPProxy);
         }
 
-        add_apiSomeIPProxy::add_apiSomeIPProxy(
+        sum_ifSomeIPProxy::sum_ifSomeIPProxy(
                             const CommonAPI::SomeIP::Address &_address,
                             const std::shared_ptr<CommonAPI::SomeIP::ProxyConnection> &_connection)
               : CommonAPI::SomeIP::Proxy(_address, _connection )
         {
-           struct timeval tv;
-           struct tm  tm_;
-           gettimeofday(&tv,NULL);
-           tm_=*localtime(&tv.tv_sec);
-           tm_.tm_sec += ( tv.tv_usec * (10E-6) );
-
-            std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
-         }
+        }
 
 
 
-        void add_apiSomeIPProxy::add(const double &_num1, const double &_num2, const double &_call_no, CommonAPI::CallStatus &_internalCallStatus, double &_result, const CommonAPI::CallInfo *_info) {
-
-           struct timeval tv;
-           struct tm  tm_;
-           gettimeofday(&tv,NULL);
-           tm_=*localtime(&tv.tv_sec);
-
-            //std::cout << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"  ";
-            std::cout << tm_.tm_sec << '.' << tv.tv_usec <<"  ";
+        void sum_ifSomeIPProxy::add2(const double &_num1, const double &_num2, CommonAPI::CallStatus &_internalCallStatus, double &_result, const CommonAPI::CallInfo *_info) {
             CommonAPI::Deployable<double, CommonAPI::EmptyDeployment> deploy_num1(_num1, static_cast<CommonAPI::EmptyDeployment*>(nullptr));
             CommonAPI::Deployable<double, CommonAPI::EmptyDeployment> deploy_num2(_num2, static_cast<CommonAPI::EmptyDeployment*>(nullptr));
-            CommonAPI::Deployable<double, CommonAPI::EmptyDeployment> deploy_call_no(_call_no, static_cast<CommonAPI::EmptyDeployment*>(nullptr));
             CommonAPI::Deployable<double, CommonAPI::EmptyDeployment> deploy_result(static_cast<CommonAPI::EmptyDeployment*>(nullptr));
             CommonAPI::SomeIP::ProxyHelper<
                 CommonAPI::SomeIP::SerializableArguments<
                     CommonAPI::Deployable<
-                        double,
+                        double, 
                         CommonAPI::EmptyDeployment
                     >,
                     CommonAPI::Deployable<
-                        double,
-                        CommonAPI::EmptyDeployment
-                    >,
-                    CommonAPI::Deployable<
-                        double,
+                        double, 
                         CommonAPI::EmptyDeployment
                     >
                 >,
                 CommonAPI::SomeIP::SerializableArguments<
                     CommonAPI::Deployable<
-                        double,
+                        double, 
                         CommonAPI::EmptyDeployment
                     >
                 >
@@ -106,40 +71,29 @@
                 0x80e8,
                 false,
                 (_info ? _info : &CommonAPI::SomeIP::defaultCallInfo),
-                deploy_num1, deploy_num2, deploy_call_no,
+                deploy_num1, deploy_num2,
                 _internalCallStatus,
                 deploy_result);
             _result = deploy_result.getValue();
         }
-        std::future<CommonAPI::CallStatus> add_apiSomeIPProxy::addAsync(const double &_num1, const double &_num2, const double &_call_no, AddAsyncCallback _callback, const CommonAPI::CallInfo *_info) {
-           struct timeval tv;
-           struct tm  tm_;
-           gettimeofday(&tv,NULL);
-           tm_=*localtime(&tv.tv_sec);
-
-            std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec << '.' << tv.tv_usec <<"\n";
+        std::future<CommonAPI::CallStatus> sum_ifSomeIPProxy::add2Async(const double &_num1, const double &_num2, Add2AsyncCallback _callback, const CommonAPI::CallInfo *_info) {
             CommonAPI::Deployable<double, CommonAPI::EmptyDeployment> deploy_num1(_num1, static_cast<CommonAPI::EmptyDeployment*>(nullptr));
             CommonAPI::Deployable<double, CommonAPI::EmptyDeployment> deploy_num2(_num2, static_cast<CommonAPI::EmptyDeployment*>(nullptr));
-            CommonAPI::Deployable<double, CommonAPI::EmptyDeployment> deploy_call_no(_call_no, static_cast<CommonAPI::EmptyDeployment*>(nullptr));
             CommonAPI::Deployable<double, CommonAPI::EmptyDeployment> deploy_result(static_cast<CommonAPI::EmptyDeployment*>(nullptr));
             return CommonAPI::SomeIP::ProxyHelper<
                 CommonAPI::SomeIP::SerializableArguments<
                     CommonAPI::Deployable<
-                        double,
+                        double, 
                         CommonAPI::EmptyDeployment
                     >,
                     CommonAPI::Deployable<
-                        double,
-                        CommonAPI::EmptyDeployment
-                    >,
-                    CommonAPI::Deployable<
-                        double,
+                        double, 
                         CommonAPI::EmptyDeployment
                     >
                 >,
                 CommonAPI::SomeIP::SerializableArguments<
                     CommonAPI::Deployable<
-                        double,
+                        double, 
                         CommonAPI::EmptyDeployment
                     >
                 >
@@ -148,25 +102,20 @@
                 0x80e8,
                 false,
                 (_info ? _info : &CommonAPI::SomeIP::defaultCallInfo),
-                deploy_num1, deploy_num2, deploy_call_no,
+                deploy_num1, deploy_num2,
                 [_callback] (CommonAPI::CallStatus _internalCallStatus, CommonAPI::Deployable<double, CommonAPI::EmptyDeployment> _result) {
                 	_callback(_internalCallStatus, _result.getValue());
                 },
                 std::make_tuple(deploy_result));
         }
+        
 
 
-
-        void add_apiSomeIPProxy::getOwnVersion(uint16_t& ownVersionMajor, uint16_t& ownVersionMinor) const {
-           struct timeval tv;
-           struct tm  tm_;
-           gettimeofday(&tv,NULL);
-           tm_=*localtime(&tv.tv_sec);
-
-            std::cout << "\n" << __FILE__ << "\t" << __FUNCTION__<< '\t' << __LINE__ << '\t' << tm_.tm_hour <<":"<< tm_.tm_min << ":" << tm_.tm_sec<< '.' << tv.tv_usec <<"\n";
+        void sum_ifSomeIPProxy::getOwnVersion(uint16_t& ownVersionMajor, uint16_t& ownVersionMinor) const {
             ownVersionMajor = 1;
             ownVersionMinor = 0;
         }
 
-        } // namespace ipc_math
+        } // namespace sum
+        } // namespace math
         } // namespace v1_0

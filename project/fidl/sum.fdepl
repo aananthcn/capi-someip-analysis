@@ -1,21 +1,20 @@
 import "platform:/plugin/org.genivi.commonapi.someip/deployment/CommonAPI-SOMEIP_deployment_spec.fdepl"
-import "math.fidl"
+import "sum.fidl"
 
-define org.genivi.commonapi.someip.deployment for interface ipc_math.add_api
-{
+define org.genivi.commonapi.someip.deployment for interface math.sum.sum_if {
+
   SomeIpServiceID = 4660
 
-  method add
-  {
+  method add2 {
      SomeIpMethodID = 33000
   }
 
 }
 
-define org.genivi.commonapi.someip.deployment for provider MyService
+define org.genivi.commonapi.someip.deployment for provider MathService
 {
-  instance ipc_math.add_api
-  {
+
+  instance math.sum.sum_if {
       InstanceId = "test"
       SomeIpInstanceID = 22136
   }

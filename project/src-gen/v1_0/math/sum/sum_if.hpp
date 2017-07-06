@@ -7,8 +7,8 @@
 * If a copy of the MPL was not distributed with this file, You can obtain one at
 * http://mozilla.org/MPL/2.0/.
 */
-#ifndef IPC_MATH_ADD_API_HPP_
-#define IPC_MATH_ADD_API_HPP_
+#ifndef MATH_SUM_SUM_IF_HPP_
+#define MATH_SUM_SUM_IF_HPP_
 
 
 
@@ -18,44 +18,35 @@
 #endif
 
 #include <CommonAPI/Types.hpp>
-#include <iostream>
-#include <ctime>
-#include <time.h>
-#include <sys/time.h>
-
-#include "mytime.hpp"
 
 #undef COMMONAPI_INTERNAL_COMPILATION
 
 namespace v1_0 {
-namespace ipc_math {
+namespace math {
+namespace sum {
 
-class add_api {
+class sum_if {
 public:
-    virtual ~add_api() {
-    print_time(__FILE__, __FUNCTION__, __LINE__);
-
-   }
+    virtual ~sum_if() { }
 
     static inline const char* getInterface();
     static inline CommonAPI::Version getInterfaceVersion();
 };
 
-const char* add_api::getInterface() {
-    print_time(__FILE__, __FUNCTION__, __LINE__);
-    return ("ipc_math.add_api");
+const char* sum_if::getInterface() {
+    return ("math.sum.sum_if");
 }
 
-CommonAPI::Version add_api::getInterfaceVersion() {
-    print_time(__FILE__, __FUNCTION__, __LINE__);
+CommonAPI::Version sum_if::getInterfaceVersion() {
     return CommonAPI::Version(1, 0);
 }
 
 
-} // namespace ipc_math
+} // namespace sum
+} // namespace math
 } // namespace v1_0
 
 namespace CommonAPI {
 }
 
-#endif // IPC_MATH_ADD_API_HPP_
+#endif // MATH_SUM_SUM_IF_HPP_

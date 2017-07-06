@@ -7,23 +7,12 @@
 * If a copy of the MPL was not distributed with this file, You can obtain one at
 * http://mozilla.org/MPL/2.0/.
 */
-
-#ifndef COMMONAPI_SOMEIP_ADD_API_DEPLOYMENT_HPP_
-#define COMMONAPI_SOMEIP_ADD_API_DEPLOYMENT_HPP_
-
-
-
-#if !defined (COMMONAPI_INTERNAL_COMPILATION)
-#define COMMONAPI_INTERNAL_COMPILATION
-#endif
-#include <CommonAPI/SomeIP/Deployment.hpp>
-#undef COMMONAPI_INTERNAL_COMPILATION
+#include <v1_0/math/sum/sum_ifSomeIPDeployment.hpp>
 
 namespace v1_0 {
-namespace ipc_math {
-namespace add_api_ {
-
-// Interface-specific deployment types
+namespace math {
+namespace sum {
+namespace sum_if_ {
 
 // Type-specific deployments
 
@@ -31,8 +20,7 @@ namespace add_api_ {
 
 // Argument-specific deployment
 
-} // namespace add_api_
-} // namespace ipc_math
+} // namespace sum_if_
+} // namespace sum
+} // namespace math
 } // namespace v1_0
-
-#endif // COMMONAPI_SOMEIP_ADD_API_DEPLOYMENT_HPP_

@@ -7,10 +7,10 @@
 * If a copy of the MPL was not distributed with this file, You can obtain one at
 * http://mozilla.org/MPL/2.0/.
 */
-#ifndef IPC_MATH_ADD_API_SOMEIP_STUB_ADAPTER_HPP_
-#define IPC_MATH_ADD_API_SOMEIP_STUB_ADAPTER_HPP_
+#ifndef MATH_SUM_SUM_IF_SOMEIP_STUB_ADAPTER_HPP_
+#define MATH_SUM_SUM_IF_SOMEIP_STUB_ADAPTER_HPP_
 
-#include <v1_0/ipc_math/add_apiStub.hpp>
+#include <v1_0/math/sum/sum_ifStub.hpp>
 
 #if !defined (COMMONAPI_INTERNAL_COMPILATION)
 #define COMMONAPI_INTERNAL_COMPILATION
@@ -21,74 +21,71 @@
 #include <CommonAPI/SomeIP/Factory.hpp>
 #include <CommonAPI/SomeIP/Types.hpp>
 #include <CommonAPI/SomeIP/Config.hpp>
-#include <iostream>
-#include <ctime>
-#include <time.h>
-#include <sys/time.h>
 
 #undef COMMONAPI_INTERNAL_COMPILATION
 
 namespace v1_0 {
-namespace ipc_math {
+namespace math {
+namespace sum {
 
-typedef CommonAPI::SomeIP::StubAdapterHelper<add_apiStub> add_apiSomeIPStubAdapterHelper;
+typedef CommonAPI::SomeIP::StubAdapterHelper<sum_ifStub> sum_ifSomeIPStubAdapterHelper;
 
-class add_apiSomeIPStubAdapterInternal
-    : public virtual add_apiStubAdapter,
-      public add_apiSomeIPStubAdapterHelper
+class sum_ifSomeIPStubAdapterInternal
+    : public virtual sum_ifStubAdapter,
+      public sum_ifSomeIPStubAdapterHelper
 {
 public:
-    add_apiSomeIPStubAdapterInternal(
+    sum_ifSomeIPStubAdapterInternal(
             const CommonAPI::SomeIP::Address &_address,
             const std::shared_ptr<CommonAPI::SomeIP::ProxyConnection> &_connection,
             const std::shared_ptr<CommonAPI::StubBase> &_stub);
 
-    ~add_apiSomeIPStubAdapterInternal();
+    ~sum_ifSomeIPStubAdapterInternal();
 
 
 
 
-    const add_apiSomeIPStubAdapterHelper::StubDispatcherTable& getStubDispatcherTable();
+    const sum_ifSomeIPStubAdapterHelper::StubDispatcherTable& getStubDispatcherTable();
     const CommonAPI::SomeIP::StubAttributeTable& getStubAttributeTable();
 
     void deactivateManagedInstances();
 
 
 static CommonAPI::SomeIP::GetAttributeStubDispatcher<
-        ::v1_0::ipc_math::add_apiStub,
+        ::v1_0::math::sum::sum_ifStub,
         CommonAPI::Version
-        > getadd_apiInterfaceVersionStubDispatcher;
+        > getsum_ifInterfaceVersionStubDispatcher;
 
 
 
 static CommonAPI::SomeIP::MethodWithReplyStubDispatcher<
-    ::v1_0::ipc_math::add_apiStub,
-    std::tuple<double, double, double>,
+    ::v1_0::math::sum::sum_ifStub,
+    std::tuple<double, double>,
     std::tuple<double>,
-    std::tuple<CommonAPI::EmptyDeployment, CommonAPI::EmptyDeployment, CommonAPI::EmptyDeployment>,
+    std::tuple<CommonAPI::EmptyDeployment, CommonAPI::EmptyDeployment>,
     std::tuple<CommonAPI::EmptyDeployment>
-> addStubDispatcher;
+> add2StubDispatcher;
 
 
  private:
-    add_apiSomeIPStubAdapterHelper::StubDispatcherTable stubDispatcherTable_;
+    sum_ifSomeIPStubAdapterHelper::StubDispatcherTable stubDispatcherTable_;
     CommonAPI::SomeIP::StubAttributeTable stubAttributeTable_;
 };
 
-class add_apiSomeIPStubAdapter
-    : public add_apiSomeIPStubAdapterInternal,
-      public std::enable_shared_from_this<add_apiSomeIPStubAdapter> {
+class sum_ifSomeIPStubAdapter
+    : public sum_ifSomeIPStubAdapterInternal,
+      public std::enable_shared_from_this<sum_ifSomeIPStubAdapter> {
 public:
-    add_apiSomeIPStubAdapter(const CommonAPI::SomeIP::Address &_address,
+    sum_ifSomeIPStubAdapter(const CommonAPI::SomeIP::Address &_address,
                                             const std::shared_ptr<CommonAPI::SomeIP::ProxyConnection> &_connection,
-                                            const std::shared_ptr<CommonAPI::StubBase> &_stub)
+                                            const std::shared_ptr<CommonAPI::StubBase> &_stub) 
         : CommonAPI::SomeIP::StubAdapter(_address, _connection),
-          add_apiSomeIPStubAdapterInternal(_address, _connection, _stub) {
-            print_time(__FILE__, __FUNCTION__, __LINE__);
+          sum_ifSomeIPStubAdapterInternal(_address, _connection, _stub) {
     }
 };
 
-} // namespace ipc_math
+} // namespace sum
+} // namespace math
 } // namespace v1_0
 
-#endif // IPC_MATH_add_api_SOMEIP_STUB_ADAPTER_HPP_
+#endif // MATH_SUM_sum_if_SOMEIP_STUB_ADAPTER_HPP_
