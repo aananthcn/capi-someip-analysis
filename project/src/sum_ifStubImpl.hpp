@@ -17,7 +17,7 @@ public:
 	sum_ifStubImpl();
 	virtual ~sum_ifStubImpl();
 	virtual void add2(const std::shared_ptr<CommonAPI::ClientId> _client, double _num1, double _num2, add2Reply_t _reply);
-	static void my_signal_handeler(int sig);
+	static void my_signal_handler(int sig);
 	int getCallCount();
 
 private:

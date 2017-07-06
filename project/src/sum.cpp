@@ -14,7 +14,7 @@ int loop_cnt = 0;
 
 int main()
 {
-        signal(SIGINT, sum_ifStubImpl::my_signal_handeler);
+        signal(SIGINT, sum_ifStubImpl::my_signal_handler);
 
         print_time(__FILE__, __func__, __LINE__); // time initialized in constructor of other classes
         std::shared_ptr<CommonAPI::Runtime> runtime = CommonAPI::Runtime::get();

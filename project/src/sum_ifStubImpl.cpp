@@ -29,7 +29,7 @@ void sum_ifStubImpl::add2(const std::shared_ptr<CommonAPI::ClientId> _client, do
 }
 
 
-void sum_ifStubImpl::my_signal_handeler(int sig)
+void sum_ifStubImpl::my_signal_handler(int sig)
 {
         exit(1);
 }
