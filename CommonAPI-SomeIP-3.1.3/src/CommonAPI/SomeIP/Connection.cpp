@@ -185,6 +185,7 @@ Connection::Connection(const std::string &_name)
         executeEndlessPoll(false),
 		cleanupCancelled_(false) {
 
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     application_->init(); //TODO error handling
 
     std::function<void(event_type_e)> connectionHandler = std::bind(&Connection::onConnectionEvent,

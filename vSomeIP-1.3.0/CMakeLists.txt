@@ -61,6 +61,7 @@ endif (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
 
 include_directories(
 	"interface" 
+    ../project/src
 )
 # Threads
 find_package(Threads REQUIRED)
@@ -115,17 +116,18 @@ set(EXAMPLE_CONFIG_FILES
 )
 
 # Examples
+link_directories(../../project/build/)
 add_executable(request-sample examples/request-sample.cpp ${EXAMPLE_CONFIG_FILES})
-target_link_libraries(request-sample vsomeip ${Boost_LIBRARIES} ${DL_LIBRARY})
+target_link_libraries(request-sample vsomeip ${Boost_LIBRARIES} ${DL_LIBRARY} mytime)
 
 add_executable(response-sample examples/response-sample.cpp ${EXAMPLE_CONFIG_FILES})
-target_link_libraries(response-sample vsomeip ${Boost_LIBRARIES} ${DL_LIBRARY})
+target_link_libraries(response-sample vsomeip ${Boost_LIBRARIES} ${DL_LIBRARY} mytime)
 
 add_executable(subscribe-sample examples/subscribe-sample.cpp ${EXAMPLE_CONFIG_FILES})
-target_link_libraries(subscribe-sample vsomeip ${Boost_LIBRARIES} ${DL_LIBRARY})
+target_link_libraries(subscribe-sample vsomeip ${Boost_LIBRARIES} ${DL_LIBRARY} mytime)
 
 add_executable(notify-sample examples/notify-sample.cpp ${EXAMPLE_CONFIG_FILES})
-target_link_libraries(notify-sample vsomeip ${Boost_LIBRARIES} ${DL_LIBRARY})
+target_link_libraries(notify-sample vsomeip ${Boost_LIBRARIES} ${DL_LIBRARY} mytime)
 
 ###################################################################################################
 

@@ -10,6 +10,8 @@
 #include <v1_0/math/sum/sum_ifStubDefault.hpp>
 #include <assert.h>
 
+#include "mytime.hpp"
+
 namespace v1_0 {
 namespace math {
 namespace sum {
@@ -17,6 +19,7 @@ namespace sum {
 sum_ifStubDefault::sum_ifStubDefault():
         remoteEventHandler_(this),
         interfaceVersion_(sum_if::getInterfaceVersion()) {
+		print_time(__FILE__, __FUNCTION__, __LINE__);
 }
 
 const CommonAPI::Version& sum_ifStubDefault::getInterfaceVersion(std::shared_ptr<CommonAPI::ClientId> _client) {

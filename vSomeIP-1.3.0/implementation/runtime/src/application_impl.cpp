@@ -17,6 +17,8 @@
 #include "../../routing/include/routing_manager_proxy.hpp"
 #include "../../utility/include/utility.hpp"
 
+#include "mytime.hpp"
+
 namespace vsomeip {
 
 application_impl::application_impl(const std::string &_name)
@@ -33,6 +35,7 @@ application_impl::~application_impl() {
 
 bool application_impl::init() {
     bool is_initialized(false);
+    print_time(__FILE__, __FUNCTION__, __LINE__);
 
     // Application name
     if (name_ == "") {
@@ -109,6 +112,7 @@ bool application_impl::init() {
 }
 
 void application_impl::start() {
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     is_dispatching_ = true;
 
     for (size_t i = 0; i < num_dispatchers_; i++)

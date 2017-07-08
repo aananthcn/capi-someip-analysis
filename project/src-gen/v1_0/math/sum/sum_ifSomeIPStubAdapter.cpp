@@ -16,6 +16,8 @@
 
 #include <CommonAPI/SomeIP/AddressTranslator.hpp>
 
+#include "mytime.hpp"
+
 #undef COMMONAPI_INTERNAL_COMPILATION
 
 namespace v1_0 {
@@ -30,6 +32,7 @@ std::shared_ptr<CommonAPI::SomeIP::StubAdapter> createsum_ifSomeIPStubAdapter(
 }
 
 INITIALIZER(registersum_ifSomeIPStubAdapter) {
+    print_time(__FILE__, __func__, __LINE__);
     CommonAPI::SomeIP::AddressTranslator::get()->insert(
         "local:math.sum.sum_if:test",
         0x1234, 0x5678);
@@ -93,6 +96,7 @@ sum_ifSomeIPStubAdapterInternal::sum_ifSomeIPStubAdapterInternal(
         stubAttributeTable_(
         ) {
         	
+        print_time(__FILE__, __func__, __LINE__);
 
 }
 

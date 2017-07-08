@@ -19,6 +19,8 @@
 #include <CommonAPI/SomeIP/AddressTranslator.hpp>
 #include <CommonAPI/SomeIP/Config.hpp>
 
+#include "mytime.hpp"
+
 namespace CommonAPI {
 namespace SomeIP {
 
@@ -32,6 +34,7 @@ std::shared_ptr<AddressTranslator> AddressTranslator::get() {
 }
 
 AddressTranslator::AddressTranslator() {
+	print_time(__FILE__, __FUNCTION__, __LINE__);
 	init();
 }
 
@@ -100,6 +103,8 @@ AddressTranslator::translate(const Address &_key, CommonAPI::Address &_value) {
 void
 AddressTranslator::insert(
 		const std::string &_address, const service_id_t _service, const instance_id_t _instance) {
+	std::cout << "<<< " << __FUNCTION__ << "(): address: " << _address << ", service: " 
+		<< std::hex << _service << ", instance: " << std::hex << _instance << endl;
 	if (isValidService(_service) && isValidInstance(_instance)) {
 		CommonAPI::Address address(_address);
 		Address someipAddress(_service, _instance);

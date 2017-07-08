@@ -15,7 +15,6 @@ sum_ifStubImpl::sum_ifStubImpl() {
 
 
 sum_ifStubImpl::~sum_ifStubImpl() {
-    print_time(__FILE__, __FUNCTION__, __LINE__);
 }
 
 

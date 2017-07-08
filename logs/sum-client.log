@@ -1,0 +1,646 @@
+<<< /home/aananth/projects/capi-someip/CommonAPI-3.1.3/src/CommonAPI/Runtime.cpp::Runtime():55 | TIMER RESET!!
+»—› /home/aananth/projects/capi-someip/CommonAPI-3.1.3/src/CommonAPI/Runtime.cpp::Runtime():56 | time=10:41:0.762769; time-diff=218 us
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Factory.cpp::FactoryInit():19 | time=10:41:0.762950; time-diff=399 us
+»—› /home/aananth/projects/capi-someip/CommonAPI-3.1.3/src/CommonAPI/Runtime.cpp::get():47 | time=10:41:0.763085; time-diff=534 us
+»—› /home/aananth/projects/capi-someip/CommonAPI-3.1.3/src/CommonAPI/Runtime.cpp::readConfiguration():160 | time=10:41:0.763140; time-diff=589 us
+<<< config file = /etc/commonapi.ini
+»—› /home/aananth/projects/capi-someip/CommonAPI-3.1.3/src/CommonAPI/Runtime.cpp::init():135 | time=10:41:0.763285; time-diff=734 us
+<<< default binding = dbus, default folder = /usr/local/lib/commonapidefault config = /etc/commonapi.ini, default factory = 0
+»—› /home/aananth/projects/capi-someip/CommonAPI-3.1.3/src/CommonAPI/Runtime.cpp::registerFactory():65 | time=10:41:0.763331; time-diff=780 us
+register factory : someip
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/AddressTranslator.cpp::AddressTranslator():37 | time=10:41:0.763544; time-diff=993 us
+<<< insert(): address: local:math.sum.sum_if:test, service: 1234, instance: 5678
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Factory.cpp::registerProxyCreateMethod():27 | time=a:29:0.ba7cd; time-diff=1302 us
+<<< /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():16 | TIMER RESET!!
+»—› /home/aananth/projects/capi-someip/CommonAPI-3.1.3/src/CommonAPI/Runtime.cpp::get():2f | time=a:29:0.ba869; time-diff=45 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-3.1.3/include/CommonAPI/Runtime.hpp::buildProxy():37 | time=a:29:0.ba87c; time-diff=64 us
+»—› /home/aananth/projects/capi-someip/CommonAPI-3.1.3/src/CommonAPI/Runtime.cpp::createProxy():dd | time=a:29:0.ba888; time-diff=76 us
+»—› /home/aananth/projects/capi-someip/CommonAPI-3.1.3/src/CommonAPI/Runtime.cpp::createProxyHelper():17d | time=a:29:0.ba894; time-diff=88 us
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Factory.cpp::createProxy():39 | time=a:29:0.ba8a6; time-diff=106 us
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Factory.cpp::getConnection():fb | time=a:29:0.ba8dd; time-diff=161 us
+<<< getConnection(): _connectionId = ""
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Connection.cpp::Connection():bc | time=a:29:0.baafe; time-diff=706 us
+»—› /home/aananth/projects/capi-someip/vSomeIP-1.3.0/implementation/runtime/src/application_impl.cpp::init():26 | time=a:29:0.bab20; time-diff=740 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:0.bc3fb; time-diff=7103 us
+»—› /home/aananth/projects/capi-someip/vSomeIP-1.3.0/implementation/runtime/src/application_impl.cpp::start():73 | time=a:29:0.bc3fb; time-diff=7103 us
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Connection.cpp::isAvailable():198 | time=a:29:0.bc636; time-diff=7674 us
+	Got proxy for domain: "local" interface: "math.sum.sum_if" _instance: "test" _connectionId: ""
+
+
+Proxy is trying to connect to stub...
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:0.bc680; time-diff=7748 us
+availabilityStatus_ = 0
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:0.bc691; time-diff=7765 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:0.bc6fd; time-diff=7873 us
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.42602; time-diff=507910 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.42644; time-diff=507976 us
+
+
+Connected...!!
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():2c | time=a:29:1.426a2; time-diff=508070 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 1 + 1
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.426f7; time-diff=508155 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4270b; time-diff=508175 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.427f4; time-diff=508408 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.42c62; time-diff=509542 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 2 + 2
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.42ca5; time-diff=509609 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.42cb6; time-diff=509626 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.42ce8; time-diff=509676 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.42f1d; time-diff=510241 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 3 + 3
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.42f5d; time-diff=510305 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.42f6e; time-diff=510322 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.42f9d; time-diff=510369 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4319e; time-diff=510882 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 4 + 4
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.431dd; time-diff=510945 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.431ee; time-diff=510962 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4321d; time-diff=511009 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4341d; time-diff=511521 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 5 + 5
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4345c; time-diff=511584 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4346e; time-diff=511602 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4349c; time-diff=511648 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.436de; time-diff=512226 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 6 + 6
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4371d; time-diff=512289 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4372e; time-diff=512306 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.43793; time-diff=512407 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.439fb; time-diff=513023 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 7 + 7
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.43a3a; time-diff=513086 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.43a4c; time-diff=513104 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.43a7a; time-diff=513150 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.43cbb; time-diff=513727 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 8 + 8
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.43ce3; time-diff=513767 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.43cf1; time-diff=513781 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.43d14; time-diff=513816 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.43fa8; time-diff=514476 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 9 + 9
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.43fe8; time-diff=514540 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.43ff9; time-diff=514557 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.44027; time-diff=514603 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4423e; time-diff=515138 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 10 + 10
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4427c; time-diff=515200 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4428d; time-diff=515217 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.442bb; time-diff=515263 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.444f3; time-diff=515831 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 11 + 11
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.44531; time-diff=515893 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.44543; time-diff=515911 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4456f; time-diff=515955 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.447ad; time-diff=516529 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 12 + 12
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.44817; time-diff=516635 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4482b; time-diff=516655 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.44859; time-diff=516701 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.44aa8; time-diff=517292 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 13 + 13
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.44ae7; time-diff=517355 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.44af8; time-diff=517372 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.44b26; time-diff=517418 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.44d3c; time-diff=517952 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 14 + 14
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.44d7b; time-diff=518015 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.44d8d; time-diff=518033 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.44dbb; time-diff=518079 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.44fce; time-diff=518610 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 15 + 15
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.44ff6; time-diff=518650 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.45003; time-diff=518663 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.45026; time-diff=518698 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4521c; time-diff=519200 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 16 + 16
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4523f; time-diff=519235 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4524c; time-diff=519248 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4526e; time-diff=519282 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.45470; time-diff=519796 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 17 + 17
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.45494; time-diff=519832 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.454a1; time-diff=519845 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.454f2; time-diff=519926 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.456f5; time-diff=520441 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 18 + 18
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4571a; time-diff=520478 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.45727; time-diff=520491 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.45748; time-diff=520524 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.45956; time-diff=521050 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 19 + 19
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.45979; time-diff=521085 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.45986; time-diff=521098 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.459a6; time-diff=521130 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.45baf; time-diff=521651 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 20 + 20
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.45bf4; time-diff=521720 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.45c05; time-diff=521737 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.45c37; time-diff=521787 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.45e32; time-diff=522294 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 21 + 21
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.45e72; time-diff=522358 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.45e84; time-diff=522376 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.45eb2; time-diff=522422 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.460bb; time-diff=522943 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 22 + 22
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.460fb; time-diff=523007 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4610c; time-diff=523024 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4613b; time-diff=523071 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4633b; time-diff=523583 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 23 + 23
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.463a9; time-diff=523693 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.463bd; time-diff=523713 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.463ed; time-diff=523761 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.465e1; time-diff=524261 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 24 + 24
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.46621; time-diff=524325 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.46632; time-diff=524342 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.46661; time-diff=524389 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.46879; time-diff=524925 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 25 + 25
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.468b9; time-diff=524989 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.468ca; time-diff=525006 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.468f8; time-diff=525052 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.46aef; time-diff=525555 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 26 + 26
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.46b2f; time-diff=525619 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.46b40; time-diff=525636 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.46b6f; time-diff=525683 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.46d6d; time-diff=526193 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 27 + 27
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.46dad; time-diff=526257 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.46dbe; time-diff=526274 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.46dec; time-diff=526320 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.46fa0; time-diff=526756 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 28 + 28
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.46fdf; time-diff=526819 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.46ff1; time-diff=526837 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4704c; time-diff=526928 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4727d; time-diff=527489 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 29 + 29
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.472bd; time-diff=527553 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.472ce; time-diff=527570 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.472fc; time-diff=527616 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.474cc; time-diff=528080 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 30 + 30
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4750c; time-diff=528144 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4751d; time-diff=528161 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4754d; time-diff=528209 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4774f; time-diff=528723 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 31 + 31
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.47787; time-diff=528779 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.47796; time-diff=528794 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.477db; time-diff=528863 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4799d; time-diff=529313 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 32 + 32
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.479d6; time-diff=529370 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.479e5; time-diff=529385 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.47a0e; time-diff=529426 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.47b9c; time-diff=529824 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 33 + 33
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.47bd5; time-diff=529881 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.47be4; time-diff=529896 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.47c0e; time-diff=529938 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.47d84; time-diff=530312 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 34 + 34
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.47de3; time-diff=530407 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.47df5; time-diff=530425 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.47e1f; time-diff=530467 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.47fa8; time-diff=530860 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 35 + 35
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.47fe0; time-diff=530916 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.47ff0; time-diff=530932 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4801a; time-diff=530974 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.481d7; time-diff=531419 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 36 + 36
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.48210; time-diff=531476 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4821f; time-diff=531491 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.48248; time-diff=531532 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.483d1; time-diff=531925 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 37 + 37
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4840a; time-diff=531982 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.48419; time-diff=531997 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.48442; time-diff=532038 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.485b5; time-diff=532409 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 38 + 38
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.485ee; time-diff=532466 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.485fd; time-diff=532481 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.48627; time-diff=532523 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.487b1; time-diff=532917 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 39 + 39
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.487ea; time-diff=532974 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.487f9; time-diff=532989 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4884b; time-diff=533071 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.489a4; time-diff=533416 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 40 + 40
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.489c8; time-diff=533452 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.489d4; time-diff=533464 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.489f3; time-diff=533495 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.48b2f; time-diff=533811 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 41 + 41
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.48b50; time-diff=533844 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.48b5c; time-diff=533856 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.48b79; time-diff=533885 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.48d24; time-diff=534312 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 42 + 42
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.48d5d; time-diff=534369 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.48d6c; time-diff=534384 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.48d96; time-diff=534426 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.48f55; time-diff=534873 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 43 + 43
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.48f8d; time-diff=534929 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.48f9c; time-diff=534944 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.48fc6; time-diff=534986 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.49182; time-diff=535430 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 44 + 44
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.491ba; time-diff=535486 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.491c9; time-diff=535501 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.491f3; time-diff=535543 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.493b9; time-diff=535997 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 45 + 45
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.49415; time-diff=536089 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.49427; time-diff=536107 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.49452; time-diff=536150 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.49649; time-diff=536653 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 46 + 46
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.49681; time-diff=536709 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.49691; time-diff=536725 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.496ba; time-diff=536766 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.498be; time-diff=537282 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 47 + 47
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.498f6; time-diff=537338 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.49906; time-diff=537354 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4992e; time-diff=537394 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.49b2e; time-diff=537906 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 48 + 48
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.49b68; time-diff=537964 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.49b77; time-diff=537979 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.49ba1; time-diff=538021 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.49da2; time-diff=538534 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 49 + 49
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.49dda; time-diff=538590 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.49de9; time-diff=538605 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.49e12; time-diff=538646 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4a036; time-diff=539194 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 50 + 50
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4a06f; time-diff=539251 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4a07e; time-diff=539266 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4a0cf; time-diff=539347 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4a2d2; time-diff=539862 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 51 + 51
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4a30d; time-diff=539921 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4a31c; time-diff=539936 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4a345; time-diff=539977 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4a4fb; time-diff=540415 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 52 + 52
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4a535; time-diff=540473 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4a544; time-diff=540488 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4a56d; time-diff=540529 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4a72b; time-diff=540975 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 53 + 53
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4a753; time-diff=541015 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4a75f; time-diff=541027 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4a780; time-diff=541060 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4a8f0; time-diff=541428 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 54 + 54
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4a914; time-diff=541464 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4a920; time-diff=541476 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4a93e; time-diff=541506 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4ab11; time-diff=541973 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 55 + 55
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4ab34; time-diff=542008 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4ab3f; time-diff=542019 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4ab5c; time-diff=542048 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4ad3a; time-diff=542526 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 56 + 56
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4ad83; time-diff=542599 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4ad90; time-diff=542612 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4adaf; time-diff=542643 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4afb1; time-diff=543157 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 57 + 57
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4afd5; time-diff=543193 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4afe1; time-diff=543205 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4affe; time-diff=543234 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4b1e9; time-diff=543725 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 58 + 58
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4b221; time-diff=543781 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4b231; time-diff=543797 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4b25a; time-diff=543838 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4b45b; time-diff=544351 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 59 + 59
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4b494; time-diff=544408 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4b4a3; time-diff=544423 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4b4ce; time-diff=544466 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4b6ea; time-diff=545006 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 60 + 60
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4b723; time-diff=545063 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4b732; time-diff=545078 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4b75b; time-diff=545119 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4b958; time-diff=545628 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 61 + 61
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4b990; time-diff=545684 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4b99f; time-diff=545699 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4b9ee; time-diff=545778 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4bbe6; time-diff=546282 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 62 + 62
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4bc1e; time-diff=546338 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4bc2d; time-diff=546353 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4bc55; time-diff=546393 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4be58; time-diff=546908 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 63 + 63
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4be90; time-diff=546964 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4be9f; time-diff=546979 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4bec7; time-diff=547019 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4c0c7; time-diff=547531 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 64 + 64
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4c0ff; time-diff=547587 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4c10e; time-diff=547602 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4c137; time-diff=547643 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4c2f3; time-diff=548087 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 65 + 65
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4c387; time-diff=548235 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4c39c; time-diff=548256 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4c3be; time-diff=548290 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4c57f; time-diff=548739 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 66 + 66
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4c5b7; time-diff=548795 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4c5c6; time-diff=548810 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4c608; time-diff=548876 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4c7c0; time-diff=549316 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 67 + 67
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4c81e; time-diff=549410 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4c830; time-diff=549428 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4c859; time-diff=549469 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4ca15; time-diff=549913 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 68 + 68
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4ca4d; time-diff=549969 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4ca5c; time-diff=549984 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4ca84; time-diff=550024 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4cc42; time-diff=550470 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 69 + 69
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4cc7a; time-diff=550526 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4cc89; time-diff=550541 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4ccb2; time-diff=550582 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4ce5b; time-diff=551007 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 70 + 70
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4ce80; time-diff=551044 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4ce8c; time-diff=551056 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4ceab; time-diff=551087 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4d089; time-diff=551565 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 71 + 71
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4d0c1; time-diff=551621 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4d0cf; time-diff=551635 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4d0f8; time-diff=551676 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4d2fa; time-diff=552190 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 72 + 72
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4d332; time-diff=552246 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4d341; time-diff=552261 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4d38f; time-diff=552339 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4d50f; time-diff=552723 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 73 + 73
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4d547; time-diff=552779 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4d556; time-diff=552794 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4d598; time-diff=552860 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4d71e; time-diff=553250 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 74 + 74
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4d756; time-diff=553306 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4d765; time-diff=553321 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4d78d; time-diff=553361 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4d900; time-diff=553732 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 75 + 75
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4d926; time-diff=553770 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4d931; time-diff=553781 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4d951; time-diff=553813 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4db35; time-diff=554297 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 76 + 76
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4db6d; time-diff=554353 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4db7c; time-diff=554368 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4dba4; time-diff=554408 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4dd27; time-diff=554795 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 77 + 77
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4dd5f; time-diff=554851 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4dd6e; time-diff=554866 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4dd96; time-diff=554906 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4df08; time-diff=555276 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 78 + 78
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4df53; time-diff=555351 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4dfcb; time-diff=555471 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4dff6; time-diff=555514 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4e178; time-diff=555900 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 79 + 79
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4e1b0; time-diff=555956 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4e1c0; time-diff=555972 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4e1ea; time-diff=556014 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4e372; time-diff=556406 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 80 + 80
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4e3ab; time-diff=556463 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4e3bb; time-diff=556479 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4e3e4; time-diff=556520 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4e596; time-diff=556954 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 81 + 81
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4e5cf; time-diff=557011 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4e5de; time-diff=557026 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4e608; time-diff=557068 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4e761; time-diff=557413 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 82 + 82
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4e7f1; time-diff=557557 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4e805; time-diff=557577 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4e827; time-diff=557611 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4e98b; time-diff=557967 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 83 + 83
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4e9af; time-diff=558003 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4e9ba; time-diff=558014 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4e9ff; time-diff=558083 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4eb6f; time-diff=558451 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 84 + 84
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4eb94; time-diff=558488 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4eb9f; time-diff=558499 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4ebbd; time-diff=558529 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4ed1e; time-diff=558882 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 85 + 85
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4ed42; time-diff=558918 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4ed4d; time-diff=558929 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4ed6a; time-diff=558958 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4ef28; time-diff=559404 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 86 + 86
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4ef4e; time-diff=559442 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4ef59; time-diff=559453 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4ef77; time-diff=559483 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4f0db; time-diff=559839 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 87 + 87
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4f0ff; time-diff=559875 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4f10a; time-diff=559886 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4f127; time-diff=559915 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4f28c; time-diff=560272 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 88 + 88
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4f2af; time-diff=560307 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4f2ba; time-diff=560318 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4f2d7; time-diff=560347 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4f41e; time-diff=560674 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 89 + 89
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4f461; time-diff=560741 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4f46e; time-diff=560754 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4f48c; time-diff=560784 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4f612; time-diff=561174 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 90 + 90
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4f64d; time-diff=561233 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4f65c; time-diff=561248 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4f684; time-diff=561288 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4f85b; time-diff=561759 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 91 + 91
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4f894; time-diff=561816 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4f8a3; time-diff=561831 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4f8cc; time-diff=561872 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4fa55; time-diff=562265 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 92 + 92
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4fa8e; time-diff=562322 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4fa9d; time-diff=562337 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4fac6; time-diff=562378 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4fc44; time-diff=562760 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 93 + 93
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4fc7c; time-diff=562816 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4fc8c; time-diff=562832 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4fcb4; time-diff=562872 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.4fe3f; time-diff=563267 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 94 + 94
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.4fe77; time-diff=563323 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4fe87; time-diff=563339 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.4fed8; time-diff=563420 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.5009d; time-diff=563873 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 95 + 95
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.500d7; time-diff=563931 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.500e6; time-diff=563946 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.5010f; time-diff=563987 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.502d6; time-diff=564442 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 96 + 96
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.5030f; time-diff=564499 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.5031e; time-diff=564514 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.50347; time-diff=564555 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.50524; time-diff=565032 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 97 + 97
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.5055d; time-diff=565089 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.5056c; time-diff=565104 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.50595; time-diff=565145 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.50759; time-diff=565597 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 98 + 98
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.50794; time-diff=565656 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.507a3; time-diff=565671 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.507cc; time-diff=565712 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.509bc; time-diff=566208 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 99 + 99
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.509f5; time-diff=566265 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.50a04; time-diff=566280 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.50a2d; time-diff=566321 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.50beb; time-diff=566767 us
+/home/aananth/projects/capi-someip/project/src/sumClient.cpp::main : 3c ==> 100 + 100
+»—› /home/aananth/projects/capi-someip/CommonAPI-SomeIP-3.1.3/src/CommonAPI/SomeIP/Proxy.cpp::isAvailable():49 | time=a:29:1.50c4a; time-diff=566862 us
+availabilityStatus_ = 1
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.50c5c; time-diff=566880 us
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.50c86; time-diff=566922 us
+»—› /home/aananth/projects/capi-someip/project/src/sumClient.cpp::main():3f | time=a:29:1.50e4e; time-diff=567378 us
+
+
+AVERAGE: 50.5
+
+»—› /home/aananth/projects/capi-someip/project/../CommonAPI-SomeIP-3.1.3/include/CommonAPI/SomeIP/ProxyBase.hpp::getConnection():46 | time=a:29:1.50e7f; time-diff=567427 us

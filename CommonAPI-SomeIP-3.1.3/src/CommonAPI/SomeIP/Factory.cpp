@@ -36,6 +36,7 @@ void
 Factory::registerProxyCreateMethod(
     const std::string &_interface,
     ProxyCreateFunction _function) {
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     COMMONAPI_DEBUG("Registering function for creating \"", _interface, "\" proxy.");
     proxyCreateFunctions_[_interface] = _function;
 }
@@ -44,6 +45,7 @@ void
 Factory::registerStubAdapterCreateMethod(
     const std::string &_interface,
     StubAdapterCreateFunction _function) {
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     COMMONAPI_DEBUG("Registering function for creating \"", _interface, "\" stub adapter.");
     stubAdapterCreateFunctions_[_interface] = _function;
 }
@@ -52,6 +54,7 @@ std::shared_ptr<CommonAPI::Proxy>
 Factory::createProxy(
     const std::string &_domain, const std::string &_interface, const std::string &_instance,
     const ConnectionId_t &_connectionId) {
+    print_time(__FILE__, __FUNCTION__, __LINE__);
 
     auto proxyCreateFunctionsIterator = proxyCreateFunctions_.find(_interface);
     if (proxyCreateFunctionsIterator != proxyCreateFunctions_.end()) {
@@ -100,6 +103,7 @@ bool
 Factory::registerStub(
         const std::string &_domain, const std::string &_interface, const std::string &_instance,
         std::shared_ptr<StubBase> _stub, const ConnectionId_t &_connection) {
+    print_time(__FILE__, __FUNCTION__, __LINE__);
 
     auto stubAdapterCreateFunctionsIterator = stubAdapterCreateFunctions_.find(_interface);
     if (stubAdapterCreateFunctionsIterator != stubAdapterCreateFunctions_.end()) {
@@ -145,6 +149,7 @@ Factory::registerStub(
 
 bool
 Factory::registerStubAdapter(std::shared_ptr<StubAdapter> _adapter) {
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     const std::shared_ptr<ProxyConnection> connection = _adapter->getConnection();
     CommonAPI::Address address;
     Address someipAddress = _adapter->getSomeIpAddress();
@@ -194,6 +199,7 @@ Factory::createStubAdapter(const std::shared_ptr<StubBase> &_stub,
                            const std::string &_interface,
                            const Address &_address,
                            const std::shared_ptr<ProxyConnection> &_connection) {
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     std::shared_ptr<StubAdapter> stubAdapter;
     auto stubAdapterCreateFunctionsIterator = stubAdapterCreateFunctions_.find(_interface);
     if (stubAdapterCreateFunctionsIterator != stubAdapterCreateFunctions_.end()) {
@@ -220,6 +226,7 @@ Factory::isRegisteredService(const std::string &_address) {
 
 bool
 Factory::registerManagedService(const std::shared_ptr<StubAdapter> &_adapter) {
+    print_time(__FILE__, __FUNCTION__, __LINE__);
     if(!registerStubAdapter(_adapter)) {
         COMMONAPI_ERROR("Call to registerStubAdapter(_adapter) failed");
         return false;
@@ -242,7 +249,7 @@ Factory::unregisterManagedService(const std::string &_address) {
 std::shared_ptr<Connection>
 Factory::getConnection(const ConnectionId_t &_connectionId) {
     print_time(__FILE__, __FUNCTION__, __LINE__);
-    std::cout << "_connectionId = \"" << _connectionId << "\"\n";
+    std::cout << "<<< " << __func__ << "(): _connectionId = \"" << _connectionId << "\"\n";
     std::unique_lock<std::mutex> itsLock(connectionMutex_);
 
     auto itsConnectionIterator = connections_.find(_connectionId);
